@@ -28,19 +28,18 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+COGNITIVE_CLASS_DOMAIN = (
+    'mario1234510-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
+    'proxy.cognitiveclass.ai'
+)
+
 ALLOWED_HOSTS = [
     'localhost',
-    (
-        'mario1234510-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
-        'proxy.cognitiveclass.ai'
-    ),
+    COGNITIVE_CLASS_DOMAIN,
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    (
-        'https://mario1234510-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
-        'proxy.cognitiveclass.ai'
-    ),
+    f'https://{COGNITIVE_CLASS_DOMAIN}',
 ]
 
 REST_FRAMEWORK = {
