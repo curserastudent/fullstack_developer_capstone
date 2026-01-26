@@ -1,7 +1,9 @@
 from .models import CarMake, CarModel
 
-
 def initiate():
+    if CarMake.objects.exists():
+        return
+
 
     car_make_data = [
         {"name": "NISSAN", "description": "Great cars. Japanese technology"},
